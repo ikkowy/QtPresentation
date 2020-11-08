@@ -3,5 +3,6 @@
         <file>MainWindow.qml</file>
         <file>Slide.qml</file>
         <file>TitlePage.qml</file>
+        <file>Julia.qml</file>
     </qresource>
 </RCC>

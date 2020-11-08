@@ -5,6 +5,8 @@ Rectangle {
     height: parent.height
     color: "#eff0f5"
 
+    property string title
+
     property string slideInfo
     property int slideNumber
 
@@ -12,6 +14,16 @@ Rectangle {
         width: parent.width
         height: 50
         color: "#161925"
+
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
+            anchors.leftMargin: 20
+            text: title
+            font.bold: true
+            font.pixelSize: 20
+            color: "#406e8e"
+        }
 
         Rectangle {
             width: parent.height

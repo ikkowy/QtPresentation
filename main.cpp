@@ -1,19 +1,22 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include <cstdio>
+#include <cmath>
+#include <iostream>
+
+#include "Julia.h"
+
 int main(int argc, char * argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/MainWindow.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+
+    engine.addImageProvider("julia", new JuliaImageProvider);
+
+    engine.load("qrc:/MainWindow.qml");
 
     return app.exec();
 }

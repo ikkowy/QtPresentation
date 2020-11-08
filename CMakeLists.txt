@@ -15,6 +15,8 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 
 add_executable(QtPresentation
     main.cpp
+    Julia.h
+    Julia.cpp
     qml.qrc
 )
 

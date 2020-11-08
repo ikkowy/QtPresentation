@@ -10,7 +10,7 @@ Window {
     title: "Qt"
 
     TitlePage {}
-    Slide {}
+    Julia {}
     Slide {}
 
     function updateSlideInfo () {
