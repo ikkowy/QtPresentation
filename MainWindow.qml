@@ -9,7 +9,7 @@ Window {
     visibility: "FullScreen"
     title: "Qt"
 
-    Slide {}
+    TitlePage {}
     Slide {}
     Slide {}
 

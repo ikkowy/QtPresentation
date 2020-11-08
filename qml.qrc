@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>MainWindow.qml</file>
         <file>Slide.qml</file>
+        <file>TitlePage.qml</file>
     </qresource>
 </RCC>
