@@ -3,10 +3,7 @@
         <file>MainWindow.qml</file>
         <file>Slide.qml</file>
         <file>TitlePage.qml</file>
-<<<<<<< HEAD
         <file>Julia.qml</file>
-=======
-        <file>TicTacToe.qml</file>
->>>>>>> f0e7814... adds a slide with the tictactoe layout
+        <file>Tictactoe.qml</file>
     </qresource>
 </RCC>
