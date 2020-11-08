@@ -12,6 +12,7 @@ Window {
     TitlePage {}
     Slide {}
     Slide {}
+    TicTacToe {}
 
     function updateSlideInfo () {
         var len = contentItem.children.length;
