@@ -3,6 +3,6 @@
         <file>MainWindow.qml</file>
         <file>Slide.qml</file>
         <file>TitlePage.qml</file>
-        <file>TicTacToe.qml</file>
+        <file>Tictactoe.qml</file>
     </qresource>
 </RCC>
