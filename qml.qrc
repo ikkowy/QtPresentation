@@ -5,5 +5,6 @@
         <file>TitlePage.qml</file>
         <file>Julia.qml</file>
         <file>Tictactoe.qml</file>
+        <file>tictactoe.js</file>
     </qresource>
 </RCC>
