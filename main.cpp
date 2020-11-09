@@ -12,6 +12,9 @@ int main(int argc, char * argv[]) {
 
     QGuiApplication app(argc, argv);
 
+    app.setOrganizationName("BA Leipzig");
+    app.setOrganizationDomain("org.ikkowy");
+
     QQmlApplicationEngine engine;
 
     engine.addImageProvider("julia", new JuliaImageProvider);

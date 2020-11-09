@@ -4,5 +4,6 @@
         <file>Slide.qml</file>
         <file>TitlePage.qml</file>
         <file>Julia.qml</file>
+        <file>res/Diskette.svg</file>
     </qresource>
 </RCC>
