@@ -44,7 +44,7 @@ function clickTile(texteditID, currentPlayer) {
     if (currentTurn == 9 && !gameEnd) {
         gameEnd = true;
         gamestatus_text.clear();
-        gamestatus_text.append("It's a draw! Please start a new game");
+        gamestatus_text.append("It's a draw!\nPlease start a new game");
     }
 }
 

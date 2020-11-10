@@ -3,47 +3,51 @@ import "tictactoe.js" as TictactoeLogic
 
 Slide {
     Column {
-        width: parent.height-100
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        spacing: parent.height*0.04
+        width: parent.height - 400
+        anchors.centerIn: parent
+        spacing: 3
 
         Rectangle {
             id: gamestatus
-            width: parent.width*0.5
-            height: 30
-            color: "#eff0f5"
+            width: parent.width
+            height: 70
+            color: "#23395b"
 
             TextEdit {
                 id: gamestatus_text
-                text: qsTr("Please start a new game")
+                width: parent.width
+                height: parent.height
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 20
+                font.bold: true
+                color: "#eff0f5"
                 readOnly: true
             }
         }
 
         Grid {
             id: tictactoe_grid
-            width: parent.height*0.8
-            height: parent.height*0.8
+            width: parent.width
+            height: parent.width
             spacing: 3
             rows: 3
             columns: 3
 
             Rectangle { id: tile_11
-                        color: "lightgrey"; width: tictactoe_grid.width/3-3; height: tictactoe_grid.height/3-3
+                        color: "lightgrey"; width: tictactoe_grid.width/3-2; height: tictactoe_grid.height/3-2
                         TextEdit { id: te_1; text: ""; font.pixelSize: parent.height*0.9; anchors.verticalCenter: parent.verticalCenter; anchors.horizontalCenter: parent.horizontalCenter; readOnly: true; property var tileNumber: 1}
                         MouseArea { anchors.fill: parent; onClicked: { TictactoeLogic.clickTile(te_1, TictactoeLogic.currentPlayer); } } }
             Rectangle { id: tile_12
-                        color: "lightgrey"; width: tictactoe_grid.width/3-3; height: tictactoe_grid.height/3-3
+                        color: "lightgrey"; width: tictactoe_grid.width/3-2; height: tictactoe_grid.height/3-2
                         TextEdit { id: te_2; text: ""; font.pixelSize: parent.height*0.9; anchors.verticalCenter: parent.verticalCenter; anchors.horizontalCenter: parent.horizontalCenter; readOnly: true; property var tileNumber: 2}
                         MouseArea { anchors.fill: parent; onClicked: { TictactoeLogic.clickTile(te_2, TictactoeLogic.currentPlayer);  } } }
             Rectangle { id: tile_3
-                        color: "lightgrey"; width: tictactoe_grid.width/3-3; height: tictactoe_grid.height/3-3
+                        color: "lightgrey"; width: tictactoe_grid.width/3-2; height: tictactoe_grid.height/3-2
                         TextEdit { id: te_3; text: ""; font.pixelSize: parent.height*0.9; anchors.verticalCenter: parent.verticalCenter; anchors.horizontalCenter: parent.horizontalCenter; readOnly: true; property var tileNumber: 3}
                         MouseArea { anchors.fill: parent; onClicked: { TictactoeLogic.clickTile(te_3, TictactoeLogic.currentPlayer);  } } }
             Rectangle { id: tile_4
-                        color: "lightgrey"; width: tictactoe_grid.width/3-3; height: tictactoe_grid.height/3-3
+                        color: "lightgrey"; width: tictactoe_grid.width/3-2; height: tictactoe_grid.height/3-2
                         TextEdit { id: te_4; text: ""; font.pixelSize: parent.height*0.9; anchors.verticalCenter: parent.verticalCenter; anchors.horizontalCenter: parent.horizontalCenter; readOnly: true; property var tileNumber: 4}
                         MouseArea { anchors.fill: parent; onClicked: { TictactoeLogic.clickTile(te_4, TictactoeLogic.currentPlayer);  } } }
             Rectangle { id: tile_5
@@ -70,13 +74,15 @@ Slide {
 
         Rectangle {
             id: newgame_button
-            width: 100
-            height: 30
+            width: parent.width
+            height: 70
             color: "darkgrey"
 
             Text {
                 id: newgame_text
+                anchors.centerIn: parent
                 text: "New Game"
+                font.bold: true
                 font.pixelSize: 20
             }
 
@@ -85,5 +91,6 @@ Slide {
 
     }
 
+    Component.onCompleted: TictactoeLogic.gameReset();
 }
 
