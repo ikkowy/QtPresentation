@@ -6,5 +6,6 @@
         <file>Julia.qml</file>
         <file>Tictactoe.qml</file>
         <file>tictactoe.js</file>
+        <file>Multimedia.qml</file>
     </qresource>
 </RCC>

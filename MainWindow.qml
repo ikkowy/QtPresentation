@@ -13,6 +13,7 @@ Window {
     Julia {}
     Slide {}
     Tictactoe {}
+    Multimedia {}
 
     function updateSlideInfo () {
         var len = contentItem.children.length;
