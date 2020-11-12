@@ -10,9 +10,9 @@ Window {
     title: "Qt"
 
     TitlePage {}
-    Julia {}
-    Slide {}
+    Chickens {}
     Tictactoe {}
+    Julia {}
     Multimedia {}
 
     function updateSlideInfo () {

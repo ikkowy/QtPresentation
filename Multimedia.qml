@@ -2,28 +2,21 @@ import QtQuick 2.0
 import QtMultimedia 5.0
 
 Slide {
-    Column {
-        width: parent.height - 100
-        anchors.centerIn: parent
-        spacing: 3
+    title: "Beispiel Multimedia"
 
-        Rectangle{
-            anchors.fill : parent.fill
-            height: 200
-            width: 300
+    Column {
+        width: 400
+        anchors.centerIn: parent
+
+        Rectangle {
+            height: parent.width
+            width: parent.width
             color: "black"
 
-            VideoOutput {
-                id: root
-                height: width
-                source: mediaPlayer
-
-                MediaPlayer {
-                    id: mediaPlayer
-                    source: "clip.mp4"
-                    autoPlay: false
-                }
-
+            Video {
+                id: video
+                anchors.fill: parent
+                source: "qrc:/clip.avi"
             }
         }
 
@@ -34,19 +27,14 @@ Slide {
             color: "darkgrey"
 
             Text {
-                id: newgame_text
                 anchors.centerIn: parent
                 text: "Start Video"
                 font.bold: true
                 font.pixelSize: 20
             }
 
-            MouseArea { anchors.fill: parent; onClicked: { start(); }}
+            MouseArea { anchors.fill: parent; onClicked: { video.play(); }}
         }
-
     }
-
-    function start() { mediaPlayer.play() }
-    function stop() { mediaPlayer.stop() }
 }
 

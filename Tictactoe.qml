@@ -2,6 +2,8 @@ import QtQuick 2.0
 import "tictactoe.js" as TictactoeLogic
 
 Slide {
+    title: "Beispiel Tic Tac Toe"
+
     Column {
         width: parent.height - 400
         anchors.centerIn: parent

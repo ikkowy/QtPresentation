@@ -36,7 +36,7 @@ QPixmap JuliaImageProvider::requestPixmap (const QString & id, QSize * size, con
 
                 if (sqrt(z.re * z.re + z.im * z.im) > 16) {
                     float f = (float) i / 16;
-                    color = QColor(f*255, f*255, f*255).rgba();
+                    color = QColor(f*0x40, f*0x6e, f*0x8e).rgba();
                     break;
                 }
             }
